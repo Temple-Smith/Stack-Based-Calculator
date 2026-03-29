@@ -112,13 +112,16 @@ public class BinarySearchTree {
         if (node == null) {
             return sb;
         }
+
         //recursively display nodes to the right.
-        displayTree(node.right, depth + 1);
+        sb.append(displayTree(node.right, depth + 1));
+
         //loop for indentation
         for (int i = 0; i < depth; i++) {
             sb.append("    "); //per level
         }
 
+        // For this node's data.
         sb.append("||==> ")
                 .append(node.key)
                 .append(":")
@@ -127,10 +130,7 @@ public class BinarySearchTree {
 
         //Recursively print
         sb.append(displayTree(node.left, depth + 1));
-
-
         return sb;
     }
-
 
 }
