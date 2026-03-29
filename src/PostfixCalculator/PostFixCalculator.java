@@ -6,12 +6,12 @@ import BST.BinarySearchTree;
 
 public class PostFixCalculator {
 
-    private BinarySearchTree variableTree;
+    public BinarySearchTree variableTree;
     private StackInterface<Integer> stack;
 
     //constructor
     public PostFixCalculator() {
-        BinarySearchTree variableTree = new BinarySearchTree();
+        variableTree = new BinarySearchTree();
         stack = new StackImplementation<>();
     }
 
@@ -46,6 +46,7 @@ public class PostFixCalculator {
         }
         return stack.pop();
     }
+
     private boolean isOperator(String token) {
         return token.equals("+") || token.equals("-") ||
                 token.equals("*") || token.equals("/");
