@@ -1,13 +1,13 @@
 package BST;
 
 public class BinarySearchTree {
-    Node root;
+    public Node root;
 
     public BinarySearchTree() {
         root = null;
     }
 
-    void insert(String key, int value) {
+    public void insert(String key, int value) {
         root = insertRecursion(root, key, value);
     }
 
@@ -27,7 +27,7 @@ public class BinarySearchTree {
         return root;
     }
 
-    int search(String key) {
+    public int search(String key) {
         Node current = root;
 
         while (current != null) {
@@ -45,7 +45,7 @@ public class BinarySearchTree {
         throw new NullPointerException("Key not found.");
     }
 
-    Node delete(String key) {
+    public Node delete(String key) {
         root = deleteRec(root, key);
         return root;
     }
@@ -53,7 +53,7 @@ public class BinarySearchTree {
     //We recursively iterate through our BST
     //until we locate the value we need to delete, or null.
 
-    Node deleteRec(Node root, String key) {
+    public Node deleteRec(Node root, String key) {
         // edge case: return null if the tree is empty.
         if (root == null) return root;
         // We need to update the pointer of the parent
