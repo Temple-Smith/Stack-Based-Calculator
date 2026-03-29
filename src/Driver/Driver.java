@@ -54,9 +54,9 @@ public class Driver {
         System.out.println("All variables have been deleted.");
 
         //Postfix expression 4
-        calculator.setVariable("s", 2);
-        calculator.setVariable("r", 3);
         calculator.setVariable("q", 7);
+        calculator.setVariable("r", 3);
+        calculator.setVariable("s", 2);
 
         String expression4 = "q r s * +";
         System.out.println("Post expression: " + expression4);
